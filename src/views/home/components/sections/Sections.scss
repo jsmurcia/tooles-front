@@ -1,0 +1,49 @@
+@import "../../Home.scss";
+
+.sections {
+    padding: 1.25rem;
+    gap: 0.625rem;
+
+    @media (max-width: 37.5rem) {
+        flex-direction: column;
+        gap: 1.25rem;
+        padding-top: 2.1875rem;
+    }
+
+    &__button {
+        width: 15rem;
+        height: 3.125rem;
+        display: grid;
+        place-items: center;
+        font-size: 1.875rem;
+        border-radius: 0.625rem;
+        position: relative;
+        background: $shadow;
+        background-color: rgba($color: #000000, $alpha: 0.9);
+
+        &::before {
+            position: absolute;
+            content: attr(data-before);
+            width: 100%;
+            height: 100%;
+            background-color: $primary;
+            border-radius: 0.625rem;
+            transform: translateY($y-offset);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            letter-spacing: 0.125rem;
+            font-weight: 800;
+            transition: all 0.25s ease;
+            color: white;
+        }
+
+        &:hover::before, &:focus::before {
+            transform: translateY(calc($y-offset + $y-offset / 2.5));
+        }
+
+        &:active::before {
+            transform: translateY(calc($y-offset / 10));
+        }
+    }
+}

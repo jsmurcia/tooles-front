@@ -1,0 +1,31 @@
+.checkbox input:checked ~ span::after {
+  transform: translate(14px) scale(0.8);
+}
+
+.checkbox input:checked ~ span {
+  background-color: rgb(247, 95, 95);
+}
+
+.input {
+  display: none;
+}
+
+.span {
+  display: inline-block;
+  background-color: #45cca9;
+  height: 0.9375rem;
+  width: 1.875rem;
+  border-radius: 0.9375rem;
+  box-shadow: 2 2 2 rgb(134, 134, 134);
+
+  &::after {
+    content: "";
+    display: block;
+    width: 0.9375rem;
+    height: 0.9375rem;
+    background-color: white;
+    border-radius: 0.9375rem;
+    transform: scale(0.8);
+    transition: 0.5s;
+  }
+}

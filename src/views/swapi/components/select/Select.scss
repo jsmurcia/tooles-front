@@ -1,0 +1,23 @@
+.select {
+  width: 18.75rem;
+  margin-top: 1.25rem;
+  border-radius: 0.25em;
+
+  select {
+    width: 15.625rem;
+    height: 2.1875rem;
+    padding: 0 1em;
+    background-image: none;
+    outline: none;
+    border-radius: 0.4375rem;
+    margin-left: 1.25rem;
+
+    &::-ms-expand {
+      @apply hidden;
+    }
+  }
+
+  .fa-eye {
+    @apply cursor-pointer;
+  }
+}

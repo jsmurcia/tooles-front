@@ -1,0 +1,218 @@
+.table {
+  width: 94%;
+  background-color: white;
+  border-radius: 1rem;
+  position: relative;
+  margin: 0 auto;
+  top: -60px;
+  box-shadow: 0px -2px 8px 4px rgba(229, 229, 229, 0.35);
+
+  &__description {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-top: 1.25rem;
+    margin-left: 1.5rem;
+
+    &-text {
+      color: #223240;
+      font-weight: 600;
+    }
+  }
+
+  &__button {
+    &_year {
+      background-color: #5feec8;
+      color: #1d2f68;
+      width: 4.125rem;
+      height: 2rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    &-mounth {
+      border: 2px solid #5feec8;
+      color: #5feec8;
+      width: 4.125rem;
+      height: 2rem;
+      border-radius: 40px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+  }
+
+  &__information {
+    display: flex;
+    flex: 1;
+    background: #f3f6ff;
+    border: 1px solid #4760ac;
+    border-radius: 8px;
+    height: 3.5rem;
+    color: #4760ac;
+    align-items: center;
+    gap: 0.375rem;
+    font-size: 15px;
+    justify-content: center;
+    margin: 1.5rem;
+  }
+
+  &__container {
+    display: flex;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: 1.375rem;
+  }
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+
+    &-popular {
+      background: #ffeded;
+      color: #ff4c4c;
+      border-radius: 16px;
+      padding-left: 4px;
+      padding-right: 4px;
+      font-size: 11px;
+      justify-content: center;
+      align-items: center;
+      font-weight: 600;
+      display: flex;
+    }
+
+    &-price {
+      color: #223240;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-left: 6px;
+    }
+
+    &-span {
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    &-subtitle {
+      color: #7f9bb4;
+      font-weight: 600;
+      font-size: 11px;
+      line-height: 16px;
+      margin-left: 6px;
+    }
+  }
+
+  &__container-popular {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__title-purple {
+    color: #9328c7;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    height: 1.25rem;
+    margin-left: 5px;
+  }
+  &__title-green {
+    color: #45cca9;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    height: 1.25rem;
+    margin-left: 5px;
+  }
+  &__title-blue {
+    color: #4760ac;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    height: 1.25rem;
+    margin-left: 5px;
+  }
+  &__title-none {
+    height: 1.25rem;
+  }
+
+  &__button {
+    border-radius: 6px;
+    border: 2px solid #45cca9;
+    height: 40px;
+    color: #45cca9;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+
+    &-active {
+      background: #cdfff2;
+    }
+
+    &:hover {
+      background: #cdfff2;
+    }
+  }
+
+  &__span {
+    margin-top: 4px;
+    height: 40px;
+  }
+
+  &__serveillace {
+    color: #4c647a;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #d1e3f5;
+    margin-top: 1.75rem;
+    margin-left: 10px;
+  }
+
+  &__alert {
+    color: #4c647a;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #d1e3f5;
+    margin-left: 10px;
+  }
+  &__storage {
+    color: #4c647a;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #d1e3f5;
+    border-bottom: 1px solid #d1e3f5;
+    margin-left: 10px;
+    margin-bottom: 3.125rem;
+  }
+
+  @media screen and (max-width: 1080px) {
+    top: 10px;
+
+    &__container {
+      flex-wrap: wrap;
+    }
+    &__card {
+      min-width: 11.875rem;
+    }
+  }
+  @media screen and (max-width: 1080px) {
+    &__information {
+      height: 90px;
+    }
+  }
+}

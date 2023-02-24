@@ -1,0 +1,75 @@
+$dark-primary: #0f1C41;
+$primary: #460082;
+$shadow: #541614;
+$y-offset: -0.625rem;
+
+.home {
+    background: linear-gradient(60deg, $primary 0%, #FFFFFF 100%);
+    color: #FFFFFF;
+
+    &__banner {
+        height: 65vh;
+
+        @media (min-width: 43.75rem) {
+            flex-direction: row !important;
+        }
+    }
+
+    &__title {
+        font-size: 2.625rem;
+        font-weight: 400;
+    }
+
+    &__logo {
+        width: 10rem;
+        margin-right: 0.5rem;
+    }
+
+    &__waves {
+        height: 15vh;
+        min-height: 6.22rem;
+        max-height: 9.33rem;
+        top: 0.4375rem;
+
+        @media (max-width: 48rem) {
+            height: 2.5rem;
+            min-height: 2.5rem;
+        }
+    }
+
+    &__parallax {
+        > use {
+            animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+
+            &:nth-child(1) {
+                animation-delay: -2s;
+                animation-duration: 7s;
+            }
+
+            &:nth-child(2) {
+                animation-delay: -3s;
+                animation-duration: 10s;
+            }
+
+            &:nth-child(3) {
+                animation-delay: -4s;
+                animation-duration: 13s;
+            }
+
+            &:nth-child(4) {
+                animation-delay: -5s;
+                animation-duration: 20s;
+            }
+        }
+    }
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-5.625rem, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(5.3125rem, 0, 0);
+    }
+}

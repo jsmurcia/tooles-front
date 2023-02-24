@@ -1,0 +1,103 @@
+.header {
+  height: 4.0625rem;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    height: 1.875rem;
+  }
+
+  &__description {
+    align-items: center;
+    display: flex;
+
+    &_text {
+      color: #1d2f68;
+      font-weight: 600;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+      border-left: 0.125rem solid #1d2f68;
+      padding-left: 0.3125rem;
+      margin-left: 0.5rem;
+    }
+  }
+
+  &__notification {
+    cursor: pointer;
+  }
+
+  &__point {
+    height: 0.4375rem;
+    width: 0.4375rem;
+    border-radius: 0.25rem;
+    background-color: red;
+    position: relative;
+    top: 0.4375rem;
+    left: 0.625rem;
+  }
+
+  &__container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    width: 25%;
+    justify-content: space-around;
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    margin-top: 0.5rem;
+    margin-right: 0.625rem;
+  }
+
+  &__user {
+    display: flex;
+
+    &_img {
+      height: 3.125rem;
+      width: 3.125rem;
+      border-radius: 50%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+
+    &_name {
+      font-weight: 600;
+      color: #1d2f68;
+    }
+
+    &_rol {
+      color: #9db8d1;
+      margin-top: 0.3125rem;
+    }
+  }
+
+  &__size {
+    font-size: 1.25rem;
+  }
+
+  &__icon {
+    font-size: 1.875rem;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+    cursor: pointer;
+    transition: 1s;
+  }
+  @media (max-width: 900px) {
+    &__container {
+      width: 40%;
+    }
+
+    &__description {
+      &_text {
+        display: none;
+      }
+    }
+    &__col {
+      display: none;
+    }
+  }
+}

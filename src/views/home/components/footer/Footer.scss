@@ -1,0 +1,16 @@
+@import "../../Home.scss";
+
+.footer {
+  background-color: $dark-primary;
+  font-size: 0.875rem;
+  padding: 1rem 0;
+  gap: 0.25rem;
+
+  &__networks {
+    gap: 0.375rem;
+  }
+
+  &__copyright {
+    font-size: 0.75rem;
+  }
+}
