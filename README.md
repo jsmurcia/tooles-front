@@ -7,7 +7,7 @@
 A little intro about the installation.
 
 ```
-$ git clone https://github.com/jsmurcia/tooles-front.git
+$ git clone https://github.com/jsmurcia/tooles-front.git or visit deploy: https://tooles-iota.vercel.app/
 $ cd ./tooles
 $ npm install
 $ npm run dev

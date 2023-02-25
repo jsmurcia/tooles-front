@@ -44,7 +44,7 @@ export const Swapi = () => {
 
   return (
     <div className="swapi">
-      <img alt="logo" src="img/star-wars-4.svg " className="swapi__title" />
+      <img alt="logo" src="img/star-wars-4.svg" className="swapi__title" />
       <div className="swapi__filters">
         <div className="swapi__sarch">
           <input
