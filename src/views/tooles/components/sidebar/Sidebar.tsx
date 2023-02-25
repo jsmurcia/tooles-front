@@ -1,11 +1,7 @@
+import { Fragment } from "react";
 import { Button } from "../button";
-import { NAV_ITEMS } from ".";
+import { NAV_ITEMS, SidebarProps } from ".";
 import "./Sidebar.scss";
-
-interface SidebarProps {
-  setToogle: React.Dispatch<React.SetStateAction<boolean>>;
-  toogle: boolean;
-}
 
 export const Sidebar = ({ setToogle, toogle }: SidebarProps) => {
   return (
@@ -27,7 +23,7 @@ export const Sidebar = ({ setToogle, toogle }: SidebarProps) => {
         <h3 className="sidebar__menu_title">MENÚ</h3>
         <nav className="sidebar__menu">
           {NAV_ITEMS.map(({ label, icon, active }, index) => (
-            <div key={index}>
+            <Fragment key={index}>
               {active ? (
                 <div className="sidebar__alert">
                   <p>Recuerda configurar este servicio</p>
@@ -45,7 +41,7 @@ export const Sidebar = ({ setToogle, toogle }: SidebarProps) => {
                   <span className="absolute left-14 w-max">{label}</span>
                 </p>
               </div>
-            </div>
+            </Fragment>
           ))}
         </nav>
 

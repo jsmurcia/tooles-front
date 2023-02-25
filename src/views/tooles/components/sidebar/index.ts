@@ -26,3 +26,8 @@ export const NAV_ITEMS = [
     icon: "fa-solid fa-bag-shopping",
   },
 ];
+
+export interface SidebarProps {
+  setToogle: React.Dispatch<React.SetStateAction<boolean>>;
+  toogle: boolean;
+}

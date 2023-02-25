@@ -1,18 +1,15 @@
-import { Card } from "./components/card";
-import "./Swapi.scss";
-import { swapiApi } from "../../api/swapi";
 import { useEffect, useState } from "react";
-import { FILTER_OPTIONS, Person } from ".";
+import { Card } from "./components/card";
 import { Select } from "./components/select";
 import { Button } from "../tooles/components/button";
-
-type Character = {
-  name: string;
-};
+import { swapiApi } from "../../api/swapi";
+import { Character, FILTER_OPTIONS, Person } from ".";
+import "./Swapi.scss";
 
 export const Swapi = () => {
-  const [characters, setCharacters] = useState<Person[]>();
+  const [characters, setCharacters] = useState<Person[]>([]);
   const [listRender, setListRender] = useState<Character[]>([]);
+  const [gender, setGender] = useState<string>("");
 
   const getCharacters = async () => {
     const { data } = await swapiApi.get("people/");
@@ -28,17 +25,17 @@ export const Swapi = () => {
 
   const handelSearch = ({ target }: { target: HTMLInputElement }) => {
     const filteredList = characters?.filter((item) =>
-      item.name.toLocaleLowerCase().includes(target.value)
+      item.name.toLowerCase().includes(target.value)
     );
-    setListRender(filteredList || []);
+    setListRender(filteredList);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
-    const filteredList = characters?.filter(
-      (item) =>
-        item.gender.toLocaleLowerCase() === e.target.value.toLocaleLowerCase()
+    const filteredList = characters.filter(
+      (item) => item.gender.toLowerCase() === e.target.value.toLowerCase()
     );
-    setListRender(filteredList || []);
+    setListRender(filteredList);
+    setGender(e.target.value);
   };
 
   const clearFilters = () => {
@@ -61,6 +58,7 @@ export const Swapi = () => {
           options={FILTER_OPTIONS}
           initialValue="filter"
           handleChange={(e) => handleChange(e)}
+          value={gender}
         />
         <Button
           text="Clear filters"

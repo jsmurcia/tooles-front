@@ -15,7 +15,7 @@ export const Table = () => {
       <div className="table__information">
         <i className="fa-solid fa-circle-exclamation table__icon" />
         <p className="table__information-text">
-          En el plan actual, uedes ver un resumen del consumo del tu plan. Si
+          En el plan actual, puedes ver un resumen del consumo del tu plan. Si
           quieres ver una mejor visualizacion de tu plan te invitamos a ver{" "}
           <span>Dasboard</span>
         </p>
@@ -25,16 +25,14 @@ export const Table = () => {
           <div key={index} className="table__card">
             <div className="table__container-popular">
               <h3 className={item.stylesTitle}>{item.title}</h3>
-              {item.id === 4 ? (
+              {item.id === 4 && (
                 <p className="table__card-popular">Más popular</p>
-              ) : (
-                ""
               )}
             </div>
             <p className="table__card-price">
-              {item.price}{" "}
+              {item.price}
               <span className="table__card-span">
-                {item.id === 1 ? "" : "COP mensual"}
+                {item.id !== 1 && "COP mensual"}
               </span>
             </p>
             <p className="table__card-subtitle">{item.subtitle}</p>

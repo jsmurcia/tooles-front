@@ -32,3 +32,7 @@ export const FILTER_OPTIONS = [
     label: "filter machine",
   },
 ];
+
+export type Character = {
+  name: string;
+};

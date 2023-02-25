@@ -11,7 +11,7 @@ export const Tooles = () => {
         <div className="tooles__greeting">
           <h2 className="tooles__greeting-title">¡Hola Jason!</h2>
           <p className="tooles__greeting-text">
-            Actualiza tu plan vigpro ára obtener mejores beneficios{" "}
+            Actualiza tu plan vigpro para obtener mejores beneficios{" "}
           </p>
           <div className="tooles__expires">
             <span className="tooles__description">
