@@ -1,7 +1,7 @@
 import { useState, FC, SetStateAction, Dispatch } from "react";
 import { toast } from "react-toastify";
-import axiosClient from "../../../config/axios";
-import { CURRENT_USER } from "../../../constants/user";
+import axiosClient from "../../config/axios";
+import { CURRENT_USER } from "../../constants/user";
 import { ICredentials, OnSubmitEvent } from ".";
 
 export const LoginForm: FC<{

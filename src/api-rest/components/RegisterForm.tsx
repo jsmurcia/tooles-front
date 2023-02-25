@@ -1,13 +1,13 @@
 import { useState } from "react";
-import { DIFFERENT_PASSWORDS } from "../../../constants/error";
-import axiosClient from "../../../config/axios";
+import { DIFFERENT_PASSWORDS } from "../../constants/error";
+import axiosClient from "../../config/axios";
 import {
   defaultRegisterData,
   OnChangeEvent,
   OnSubmitEvent,
   IRegisterData,
 } from ".";
-import { EMAIL_CONFIRMATION } from "../../../constants/user";
+import { EMAIL_CONFIRMATION } from "../../constants/user";
 
 export const RegisterForm = () => {
   const [user, setUser] = useState<IRegisterData>(defaultRegisterData);

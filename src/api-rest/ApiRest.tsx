@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import { LoginForm, RegisterForm } from "./components";
-import { CURRENT_USER } from "../../constants/user";
-import axiosClient from "../../config/axios";
+import { CURRENT_USER } from "../constants/user";
+import axiosClient from "../config/axios";
 import { Form } from ".";
 import "./ApiRest.scss";
 
